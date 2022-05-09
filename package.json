@@ -18,7 +18,8 @@
     "test": "hardhat test ./**/test/*.ts",
     "compile": "yarn hardhat compile",
     "clean": "yarn hardhat clean",
-    "deploy": "yarn hardhat run --network godwoken-testnet scripts/Vault.ts"
+    "deploy": "yarn hardhat run --network godwoken-testnet scripts/Vault.ts",
+    "deploy:ropsten": "yarn hardhat run --network ropsten scripts/Vault.ts"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.2",
