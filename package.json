@@ -1,0 +1,51 @@
+{
+  "name": "@hadouken-project/stableswap-v2-contracts",
+  "version": "2.3.0",
+  "description": "Addresses and ABIs of all Stable Swap V2 deployed contracts",
+  "license": "GPL-3.0-only",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hadouken-project/stableswap-v2.git",
+    "directory": "packages/deployments"
+  },
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint . --ext .ts --ignore-path ../../.eslintignore  --max-warnings 0",
+    "prepack": "yarn build",
+    "test": "hardhat test ./**/test/*.ts",
+    "compile": "yarn hardhat compile",
+    "clean": "yarn hardhat clean",
+    "deploy": "yarn hardhat run --network godwoken-testnet scripts/Vault.ts"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-etherscan": "latest",
+    "@solidity-parser/parser": "^0.14.0",
+    "@typechain/ethers-v5": "^7.2.0",
+    "@typechain/hardhat": "^6.0.0",
+    "@types/node": "^14.6.0",
+    "@typescript-eslint/eslint-plugin": "^4.1.1",
+    "@typescript-eslint/parser": "^4.1.1",
+    "eslint": "^7.9.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "ethers": "^5.4.1",
+    "hardhat": "^2.8.3",
+    "hardhat-contract-sizer": "^2.5.1",
+    "hardhat-dependency-compiler": "^1.1.2",
+    "prettier": "^2.1.2",
+    "ts-node": "^8.10.2",
+    "typechain": "^8.0.0",
+    "typescript": "^4.0.2"
+  },
+  "peerDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.1",
+    "hardhat": "^2.8.3"
+  },
+  "dependencies": {
+    "@balancer-labs/v2-pool-stable": "^2.0.0",
+    "@balancer-labs/v2-vault": "^2.0.0"
+  }
+}
