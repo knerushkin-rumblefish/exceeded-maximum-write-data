@@ -9,7 +9,7 @@ const config: HardhatUserConfig = {
   solidity: {
     version: '0.7.1',
     settings: {
-      optimizer: { enabled: true, runs: 10 },
+      optimizer: { enabled: true, runs: 20 },
       outputSelection: {
         "*": {
           "*": [
@@ -64,6 +64,18 @@ const config: HardhatUserConfig = {
       ],
       chainId: 0x315db00000006,
       url: "https://godwoken-testnet-web3-v1-rpc.ckbapp.dev",
+      throwOnCallFailures: true,
+      gas: 12000000,
+      timeout: 100000,
+      gasMultiplier: 2
+    },
+    "godwoken-devnet": {
+      accounts: [
+        '0x1390c30e5d5867ee7246619173b5922d3b04009cab9e9d91e14506231281a997',
+        '0x2dc6374a2238e414e51874f514b0fa871f8ce0eb1e7ecaa0aed229312ffc91b0',
+      ],
+      chainId: 0x116e8,
+      url: "http://localhost:8024",
       throwOnCallFailures: true,
       gas: 12000000,
       timeout: 100000,
